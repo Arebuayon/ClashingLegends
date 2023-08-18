@@ -1,0 +1,1558 @@
+[gd_scene load_steps=338 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Player2.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/basics/Conrete2.png" type="Texture" id=3]
+[ext_resource path="res://Player1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Camera2D.gd" type="Script" id=6]
+[ext_resource path="res://assets/GUI/HB_Frames_0078_Package-----------------.png" type="Texture" id=7]
+[ext_resource path="res://GUI.gd" type="Script" id=9]
+[ext_resource path="res://pause_scene.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/buildings/City-Background-in-the-Afternoon-Graphics-3175113-1.jpg" type="Texture" id=11]
+[ext_resource path="res://Destructible.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/font/Urban Heroes.ttf" type="DynamicFontData" id=13]
+[ext_resource path="res://audio/Explosion.wav" type="AudioStream" id=15]
+[ext_resource path="res://DestructibleGenerator.gd" type="Script" id=16]
+[ext_resource path="res://assets/basics/ground2.png" type="Texture" id=17]
+[ext_resource path="res://assets/buildings/bldg3.png" type="Texture" id=18]
+[ext_resource path="res://assets/buildings/Parte Baja edifcio 1.png" type="Texture" id=19]
+[ext_resource path="res://assets/buildings/Cozy World Builder_Destroyed, Fire_image-3_1688835229.png" type="Texture" id=20]
+[ext_resource path="res://assets/buildings/FD31oqmjQGu0XCh9nABtOw.png" type="Texture" id=21]
+[ext_resource path="res://assets/GUI/button_xbox_analog_trigger_dark_2.png" type="Texture" id=22]
+[ext_resource path="res://assets/buildings/Street.png" type="Texture" id=23]
+[ext_resource path="res://assets/Labels/Label.png" type="Texture" id=24]
+[ext_resource path="res://assets/buildings/Backstreet.png" type="Texture" id=25]
+[ext_resource path="res://shaders/RainShader.tres" type="Material" id=27]
+[ext_resource path="res://assets/buildings/Parte Baja Edificio 0.png" type="Texture" id=29]
+[ext_resource path="res://assets/basics/player.png" type="Texture" id=30]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_115.png" type="Texture" id=31]
+[ext_resource path="res://assets/buildings/saaaas (1).png" type="Texture" id=32]
+[ext_resource path="res://assets/buildings/dsadsasadafvsafsafsafas.png" type="Texture" id=33]
+[ext_resource path="res://assets/background.png" type="Texture" id=34]
+[ext_resource path="res://assets/buildings/Yello sign/Neon sign yellow with black background3.png" type="Texture" id=35]
+[ext_resource path="res://assets/buildings/Yello sign/Neon sign yellow with black background4.png" type="Texture" id=36]
+[ext_resource path="res://assets/buildings/Yello sign/Neon sign yellow with black background5.png" type="Texture" id=37]
+[ext_resource path="res://assets/buildings/Neon sign/Neon sign4.png" type="Texture" id=38]
+[ext_resource path="res://assets/buildings/Neon sign/Neon sign5.png" type="Texture" id=39]
+[ext_resource path="res://assets/buildings/Neon sign/Neon sign6.png" type="Texture" id=40]
+[ext_resource path="res://assets/buildings/bldg4.png" type="Texture" id=42]
+[ext_resource path="res://assets/buildings/Neon sign/Neon sign3.png" type="Texture" id=43]
+[ext_resource path="res://assets/buildings/Yello sign/Neon sign yellow with black background6.png" type="Texture" id=44]
+[ext_resource path="res://assets/buildings/Neon sign/Neon sign2.png" type="Texture" id=45]
+[ext_resource path="res://assets/buildings/Neon sign/Neon sign1.png" type="Texture" id=46]
+[ext_resource path="res://assets/buildings/Yello sign/Neon sign yellow with black background1.png" type="Texture" id=47]
+[ext_resource path="res://assets/buildings/Yello sign/Neon sign yellow with black background2.png" type="Texture" id=48]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_10.png" type="Texture" id=49]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_101.png" type="Texture" id=50]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_102.png" type="Texture" id=51]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_103.png" type="Texture" id=52]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_100.png" type="Texture" id=53]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_105.png" type="Texture" id=54]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_106.png" type="Texture" id=55]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_1.png" type="Texture" id=56]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_107.png" type="Texture" id=57]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_104.png" type="Texture" id=58]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_108.png" type="Texture" id=59]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_110.png" type="Texture" id=60]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_111.png" type="Texture" id=61]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_112.png" type="Texture" id=62]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_109.png" type="Texture" id=63]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_11.png" type="Texture" id=64]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_113.png" type="Texture" id=65]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_114.png" type="Texture" id=66]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_177.png" type="Texture" id=67]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_178.png" type="Texture" id=68]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_179.png" type="Texture" id=69]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_172.png" type="Texture" id=70]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_173.png" type="Texture" id=71]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_174.png" type="Texture" id=72]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_171.png" type="Texture" id=73]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_170.png" type="Texture" id=74]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_175.png" type="Texture" id=75]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_176.png" type="Texture" id=76]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_190.png" type="Texture" id=77]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_191.png" type="Texture" id=78]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_193.png" type="Texture" id=79]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_192.png" type="Texture" id=80]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_194.png" type="Texture" id=81]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_165.png" type="Texture" id=82]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_153.png" type="Texture" id=83]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_169.png" type="Texture" id=84]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_161.png" type="Texture" id=85]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_17.png" type="Texture" id=86]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_15.png" type="Texture" id=87]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_16.png" type="Texture" id=88]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_150.png" type="Texture" id=89]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_156.png" type="Texture" id=90]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_158.png" type="Texture" id=91]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_149.png" type="Texture" id=92]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_160.png" type="Texture" id=93]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_168.png" type="Texture" id=94]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_151.png" type="Texture" id=95]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_155.png" type="Texture" id=96]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_159.png" type="Texture" id=97]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_152.png" type="Texture" id=98]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_154.png" type="Texture" id=99]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_157.png" type="Texture" id=100]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_148.png" type="Texture" id=101]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_162.png" type="Texture" id=102]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_163.png" type="Texture" id=103]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_164.png" type="Texture" id=104]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_166.png" type="Texture" id=105]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_167.png" type="Texture" id=106]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_197.png" type="Texture" id=107]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_198.png" type="Texture" id=108]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_195.png" type="Texture" id=109]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_196.png" type="Texture" id=110]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_180.png" type="Texture" id=111]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_181.png" type="Texture" id=112]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_183.png" type="Texture" id=113]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_185.png" type="Texture" id=114]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_18.png" type="Texture" id=115]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_182.png" type="Texture" id=116]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_184.png" type="Texture" id=117]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_20.png" type="Texture" id=118]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_186.png" type="Texture" id=119]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_187.png" type="Texture" id=120]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_188.png" type="Texture" id=121]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_19.png" type="Texture" id=122]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_189.png" type="Texture" id=123]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_117.png" type="Texture" id=124]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_125.png" type="Texture" id=125]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_123.png" type="Texture" id=126]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_124.png" type="Texture" id=127]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_127.png" type="Texture" id=128]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_118.png" type="Texture" id=129]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_129.png" type="Texture" id=130]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_120.png" type="Texture" id=131]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_13.png" type="Texture" id=132]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_130.png" type="Texture" id=133]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_131.png" type="Texture" id=134]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_134.png" type="Texture" id=135]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_133.png" type="Texture" id=136]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_137.png" type="Texture" id=137]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_139.png" type="Texture" id=138]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_128.png" type="Texture" id=139]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_141.png" type="Texture" id=140]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_142.png" type="Texture" id=141]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_143.png" type="Texture" id=142]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_145.png" type="Texture" id=143]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_135.png" type="Texture" id=144]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_146.png" type="Texture" id=145]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_147.png" type="Texture" id=146]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_14.png" type="Texture" id=147]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_132.png" type="Texture" id=148]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_140.png" type="Texture" id=149]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_144.png" type="Texture" id=150]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_136.png" type="Texture" id=151]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_138.png" type="Texture" id=152]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_119.png" type="Texture" id=153]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_122.png" type="Texture" id=154]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_126.png" type="Texture" id=155]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_116.png" type="Texture" id=156]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_121.png" type="Texture" id=157]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_12.png" type="Texture" id=158]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_2.png" type="Texture" id=159]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_199.png" type="Texture" id=160]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_5.png" type="Texture" id=161]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_70.png" type="Texture" id=162]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_65.png" type="Texture" id=163]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_59.png" type="Texture" id=164]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_67.png" type="Texture" id=165]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_74.png" type="Texture" id=166]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_76.png" type="Texture" id=167]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_8.png" type="Texture" id=168]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_84.png" type="Texture" id=169]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_86.png" type="Texture" id=170]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_88.png" type="Texture" id=171]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_89.png" type="Texture" id=172]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_66.png" type="Texture" id=173]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_46.png" type="Texture" id=174]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_63.png" type="Texture" id=175]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_41.png" type="Texture" id=176]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_56.png" type="Texture" id=177]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_62.png" type="Texture" id=178]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_77.png" type="Texture" id=179]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_55.png" type="Texture" id=180]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_68.png" type="Texture" id=181]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_57.png" type="Texture" id=182]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_47.png" type="Texture" id=183]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_50.png" type="Texture" id=184]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_53.png" type="Texture" id=185]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_7.png" type="Texture" id=186]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_44.png" type="Texture" id=187]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_6.png" type="Texture" id=188]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_73.png" type="Texture" id=189]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_79.png" type="Texture" id=190]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_51.png" type="Texture" id=191]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_85.png" type="Texture" id=192]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_87.png" type="Texture" id=193]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_72.png" type="Texture" id=194]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_52.png" type="Texture" id=195]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_45.png" type="Texture" id=196]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_49.png" type="Texture" id=197]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_58.png" type="Texture" id=198]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_69.png" type="Texture" id=199]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_78.png" type="Texture" id=200]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_75.png" type="Texture" id=201]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_64.png" type="Texture" id=202]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_42.png" type="Texture" id=203]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_43.png" type="Texture" id=204]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_71.png" type="Texture" id=205]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_80.png" type="Texture" id=206]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_82.png" type="Texture" id=207]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_83.png" type="Texture" id=208]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_61.png" type="Texture" id=209]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_81.png" type="Texture" id=210]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_48.png" type="Texture" id=211]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_54.png" type="Texture" id=212]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_60.png" type="Texture" id=213]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_209.png" type="Texture" id=214]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_217.png" type="Texture" id=215]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_223.png" type="Texture" id=216]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_226.png" type="Texture" id=217]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_206.png" type="Texture" id=218]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_227.png" type="Texture" id=219]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_236.png" type="Texture" id=220]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_240.png" type="Texture" id=221]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_216.png" type="Texture" id=222]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_222.png" type="Texture" id=223]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_23.png" type="Texture" id=224]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_231.png" type="Texture" id=225]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_241.png" type="Texture" id=226]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_228.png" type="Texture" id=227]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_22.png" type="Texture" id=228]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_243.png" type="Texture" id=229]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_244.png" type="Texture" id=230]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_210.png" type="Texture" id=231]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_230.png" type="Texture" id=232]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_246.png" type="Texture" id=233]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_229.png" type="Texture" id=234]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_234.png" type="Texture" id=235]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_239.png" type="Texture" id=236]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_247.png" type="Texture" id=237]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_248.png" type="Texture" id=238]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_207.png" type="Texture" id=239]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_238.png" type="Texture" id=240]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_249.png" type="Texture" id=241]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_25.png" type="Texture" id=242]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_251.png" type="Texture" id=243]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_253.png" type="Texture" id=244]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_254.png" type="Texture" id=245]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_26.png" type="Texture" id=246]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_27.png" type="Texture" id=247]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_211.png" type="Texture" id=248]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_235.png" type="Texture" id=249]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_204.png" type="Texture" id=250]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_28.png" type="Texture" id=251]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_245.png" type="Texture" id=252]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_29.png" type="Texture" id=253]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_237.png" type="Texture" id=254]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_212.png" type="Texture" id=255]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_219.png" type="Texture" id=256]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_242.png" type="Texture" id=257]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_203.png" type="Texture" id=258]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_208.png" type="Texture" id=259]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_213.png" type="Texture" id=260]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_24.png" type="Texture" id=261]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_250.png" type="Texture" id=262]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_218.png" type="Texture" id=263]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_221.png" type="Texture" id=264]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_233.png" type="Texture" id=265]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_232.png" type="Texture" id=266]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_252.png" type="Texture" id=267]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_21.png" type="Texture" id=268]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_220.png" type="Texture" id=269]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_205.png" type="Texture" id=270]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_215.png" type="Texture" id=271]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_224.png" type="Texture" id=272]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_200.png" type="Texture" id=273]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_225.png" type="Texture" id=274]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_201.png" type="Texture" id=275]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_214.png" type="Texture" id=276]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_202.png" type="Texture" id=277]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_33.png" type="Texture" id=278]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_35.png" type="Texture" id=279]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_37.png" type="Texture" id=280]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_4.png" type="Texture" id=281]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_38.png" type="Texture" id=282]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_40.png" type="Texture" id=283]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_30.png" type="Texture" id=284]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_34.png" type="Texture" id=285]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_36.png" type="Texture" id=286]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_39.png" type="Texture" id=287]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_3.png" type="Texture" id=288]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_31.png" type="Texture" id=289]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_32.png" type="Texture" id=290]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_91.png" type="Texture" id=291]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_93.png" type="Texture" id=292]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_99.png" type="Texture" id=293]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_9.png" type="Texture" id=294]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_90.png" type="Texture" id=295]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_92.png" type="Texture" id=296]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_95.png" type="Texture" id=297]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_94.png" type="Texture" id=298]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_96.png" type="Texture" id=299]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_98.png" type="Texture" id=300]
+[ext_resource path="res://assets/Gif/video dash/videojump-dash_97.png" type="Texture" id=301]
+[ext_resource path="res://assets/buildings/tile.png" type="Texture" id=302]
+[ext_resource path="res://assets/buildings/Limitwall.png" type="Texture" id=303]
+[ext_resource path="res://assets/buildings/tile limit.png" type="Texture" id=304]
+[ext_resource path="res://assets/buildings/Limitwal-flipl.png" type="Texture" id=305]
+[ext_resource path="res://assets/buildings/walls.png" type="Texture" id=311]
+
+[sub_resource type="StreamTexture" id=94]
+flags = 4
+load_path = "res://.import/HB_Frames_0080_Package-----------------.png-b45dddf12fec9428c5c55e54dd3ba8cc.stex"
+
+[sub_resource type="StreamTexture" id=95]
+flags = 4
+load_path = "res://.import/HB_Frames_0080_Package-----------------.png-b45dddf12fec9428c5c55e54dd3ba8cc.stex"
+
+[sub_resource type="DynamicFont" id=3]
+size = 200
+outline_size = 6
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+extra_spacing_top = 30
+extra_spacing_char = 20
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=91]
+size = 500
+outline_size = 20
+outline_color = Color( 0.521569, 0.133333, 0.133333, 1 )
+use_filter = true
+extra_spacing_top = 30
+extra_spacing_char = 20
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=92]
+size = 500
+outline_size = 20
+outline_color = Color( 0.521569, 0.133333, 0.133333, 1 )
+use_filter = true
+extra_spacing_top = 30
+extra_spacing_char = 20
+font_data = ExtResource( 13 )
+
+[sub_resource type="DynamicFont" id=93]
+size = 500
+outline_size = 20
+outline_color = Color( 0.909804, 0.898039, 0.0117647, 1 )
+use_filter = true
+extra_spacing_top = 30
+extra_spacing_char = 20
+font_data = ExtResource( 13 )
+
+[sub_resource type="AtlasTexture" id=72]
+flags = 4
+atlas = ExtResource( 19 )
+
+[sub_resource type="AtlasTexture" id=73]
+flags = 4
+atlas = ExtResource( 19 )
+
+[sub_resource type="AtlasTexture" id=70]
+flags = 4
+atlas = ExtResource( 29 )
+
+[sub_resource type="AtlasTexture" id=74]
+flags = 4
+atlas = ExtResource( 42 )
+
+[sub_resource type="AtlasTexture" id=31]
+flags = 4
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 2000, 6000 )
+
+[sub_resource type="AtlasTexture" id=44]
+flags = 4
+atlas = ExtResource( 42 )
+
+[sub_resource type="AtlasTexture" id=47]
+flags = 4
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 2000, 6000 )
+
+[sub_resource type="AtlasTexture" id=18]
+flags = 4
+atlas = ExtResource( 18 )
+region = Rect2( 0, 0, 2000, 6000 )
+
+[sub_resource type="AtlasTexture" id=53]
+flags = 4
+atlas = ExtResource( 30 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 24 )
+
+[sub_resource type="AtlasTexture" id=57]
+flags = 4
+atlas = ExtResource( 32 )
+
+[sub_resource type="AtlasTexture" id=58]
+flags = 4
+atlas = ExtResource( 32 )
+
+[sub_resource type="AtlasTexture" id=59]
+flags = 4
+atlas = ExtResource( 32 )
+
+[sub_resource type="AtlasTexture" id=60]
+flags = 4
+atlas = ExtResource( 3 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 288 )
+
+[sub_resource type="Shader" id=62]
+code = "shader_type canvas_item;
+
+uniform float amount = 40.0;
+
+void fragment() {
+	vec2 uv = UV*0.05;
+	float a = fract(sin(dot(UV, vec2(12.9898, 78.233) * TIME)) * 438.5453) * 1.9;
+	vec4 col = texture(TEXTURE, UV);
+	col.a *= pow(a, amount);
+	COLOR.a = col.a;
+}"
+
+[sub_resource type="ShaderMaterial" id=63]
+shader = SubResource( 62 )
+shader_param/amount = 100.0
+
+[sub_resource type="AtlasTexture" id=64]
+flags = 4
+atlas = ExtResource( 34 )
+
+[sub_resource type="AtlasTexture" id=96]
+flags = 4
+atlas = ExtResource( 34 )
+region = Rect2( 0, 0, 3760, 2220 )
+
+[sub_resource type="AtlasTexture" id=61]
+flags = 4
+atlas = ExtResource( 33 )
+
+[sub_resource type="AtlasTexture" id=77]
+flags = 4
+atlas = ExtResource( 43 )
+
+[sub_resource type="AtlasTexture" id=79]
+flags = 4
+atlas = ExtResource( 35 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 23 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 302 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 303 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 304 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 305 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 304 )
+
+[sub_resource type="RectangleShape2D" id=50]
+extents = Vector2( 455.375, 26086 )
+
+[sub_resource type="RectangleShape2D" id=52]
+extents = Vector2( 500.5, 25815 )
+
+[sub_resource type="RectangleShape2D" id=51]
+extents = Vector2( 21168, 245.5 )
+
+[node name="Main" type="Node"]
+script = ExtResource( 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_left = 30468.0
+margin_top = 3693.0
+margin_right = 32654.0
+margin_bottom = 10666.0
+rect_scale = Vector2( -22.72, 1 )
+color = Color( 0.231373, 0.192157, 0.196078, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+modulate = Color( 0.67451, 0.670588, 0.670588, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -19144.0
+margin_top = -37310.0
+margin_right = 30308.0
+margin_bottom = -15153.0
+color = Color( 0.552941, 0.352941, 0.372549, 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+follow_viewport_enable = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+modulate = Color( 0.67451, 0.670588, 0.670588, 1 )
+material = ExtResource( 27 )
+margin_left = -19128.0
+margin_top = -14553.0
+margin_right = 20872.0
+margin_bottom = 3693.0
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer"]
+margin_left = -59128.0
+margin_top = -14553.0
+margin_right = -19128.0
+margin_bottom = 3693.0
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 1
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer"]
+margin_left = 20872.0
+margin_top = -14553.0
+margin_right = 60872.0
+margin_bottom = 3693.0
+texture = ExtResource( 11 )
+expand = true
+stretch_mode = 1
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( -319, 0 )
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+drag_margin_left = 0.0
+drag_margin_top = 0.0
+drag_margin_right = 0.0
+drag_margin_bottom = 0.0
+script = ExtResource( 6 )
+min_zoom = 2.0
+zoom_offset = Vector2( 500, 500 )
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="GUI" type="Control" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="LifeBarPlayer1" type="TextureProgress" parent="UI/GUI"]
+anchor_left = 0.97168
+anchor_top = 0.035
+anchor_right = 1.3584
+anchor_bottom = 0.103667
+rect_min_size = Vector2( 396, 0 )
+rect_scale = Vector2( -1, 1 )
+size_flags_horizontal = 2
+size_flags_vertical = 2
+value = 75.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 7 )
+tint_under = Color( 0.188235, 0.188235, 0.176471, 0.968627 )
+tint_progress = Color( 0.952941, 0.0431373, 0.0431373, 1 )
+nine_patch_stretch = true
+
+[node name="LifeBarPlayer2" type="TextureProgress" parent="UI/GUI"]
+anchor_left = 0.0195313
+anchor_top = 0.035
+anchor_right = 0.40625
+anchor_bottom = 0.103667
+value = 50.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 7 )
+tint_under = Color( 0.188235, 0.188235, 0.176471, 0.968627 )
+tint_progress = Color( 0.639216, 0.203922, 0.580392, 1 )
+nine_patch_stretch = true
+
+[node name="ManaBarPlayer1" type="TextureProgress" parent="UI/GUI"]
+anchor_left = 0.643555
+anchor_top = 0.103333
+anchor_right = 0.657227
+anchor_bottom = 0.14
+margin_left = 350.0
+margin_right = 700.0
+rect_scale = Vector2( -1, 1 )
+value = 50.0
+texture_under = SubResource( 94 )
+texture_progress = SubResource( 94 )
+tint_under = Color( 0.188235, 0.188235, 0.176471, 0.968627 )
+tint_progress = Color( 0.403922, 0.913725, 0.639216, 1 )
+nine_patch_stretch = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="ManaBarPlayer2" type="TextureProgress" parent="UI/GUI"]
+anchor_left = 0.025
+anchor_top = 0.113
+anchor_right = 0.395
+anchor_bottom = 0.15
+margin_left = -5.6
+margin_top = -5.8
+margin_right = -37.48
+margin_bottom = -6.0
+value = 50.0
+texture_under = SubResource( 95 )
+texture_progress = SubResource( 95 )
+tint_under = Color( 0.188235, 0.188235, 0.176471, 0.968627 )
+tint_progress = Color( 0.403922, 0.913725, 0.639216, 1 )
+nine_patch_stretch = true
+
+[node name="Tween" type="Tween" parent="UI/GUI"]
+
+[node name="Menu" type="Control" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="pause_scene" parent="UI/Menu" instance=ExtResource( 10 )]
+
+[node name="Destructibles" type="Node" parent="."]
+
+[node name="Control" type="Control" parent="Destructibles"]
+margin_left = -12256.0
+margin_top = -351.0
+margin_right = -8874.0
+margin_bottom = 610.0
+script = ExtResource( 16 )
+destructible_scene = ExtResource( 12 )
+
+[node name="fondos" type="Node2D" parent="Destructibles"]
+
+[node name="Sprite2" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -4818, -2379 )
+scale = Vector2( 3.89648, 6.53728 )
+texture = ExtResource( 21 )
+
+[node name="Sprite" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 5363, -2388 )
+scale = Vector2( 3.89453, 6.5636 )
+texture = ExtResource( 20 )
+
+[node name="Sprite4" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 14959, -392 )
+scale = Vector2( 1.27734, 2.17105 )
+texture = ExtResource( 20 )
+
+[node name="Sprite5" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 16455, -2547 )
+scale = Vector2( 1.62891, 6.89693 )
+texture = ExtResource( 21 )
+
+[node name="Sprite13" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -14129.5, -2547.5 )
+scale = Vector2( 1.88476, 6.9068 )
+texture = ExtResource( 21 )
+
+[node name="Sprite6" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -16120, 1840 )
+scale = Vector2( 3.54513, 4.74713 )
+texture = ExtResource( 25 )
+
+[node name="Sprite10" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -10152, 1848 )
+scale = Vector2( 3.54513, 4.77778 )
+texture = ExtResource( 25 )
+
+[node name="Sprite11" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -4184, 1848 )
+scale = Vector2( 3.54513, 4.77778 )
+texture = ExtResource( 25 )
+
+[node name="Sprite14" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 1784, 1848 )
+scale = Vector2( 3.545, 4.778 )
+texture = ExtResource( 25 )
+
+[node name="Sprite15" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 7752, 1848 )
+scale = Vector2( 3.545, 4.778 )
+texture = ExtResource( 25 )
+
+[node name="Sprite16" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 13722, 1848 )
+scale = Vector2( 3.545, 4.778 )
+texture = ExtResource( 25 )
+
+[node name="Sprite17" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 19688, 1848 )
+scale = Vector2( 3.545, 4.778 )
+texture = ExtResource( 25 )
+
+[node name="Sprite7" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 1133.5, 6458.5 )
+scale = Vector2( 632.453, 129.141 )
+texture = ExtResource( 17 )
+
+[node name="Sprite3" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -13440, 64 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite8" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -11008, 64 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite9" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -8576, 64 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite12" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -6144, 64 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite18" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -3725, 62 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite19" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( -1305, 62 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite20" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 1127, 62 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite21" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 3558, 62 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite22" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 5989, 62 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite23" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 8421, 62 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite24" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 10853, 62 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite25" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 13285, 62 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Sprite26" type="Sprite" parent="Destructibles/fondos"]
+position = Vector2( 15717, 62 )
+scale = Vector2( 1.26667, 1.31807 )
+texture = ExtResource( 311 )
+
+[node name="Label3" type="Label" parent="Destructibles/fondos"]
+margin_left = -12156.0
+margin_top = -351.0
+margin_right = -5679.0
+margin_bottom = 224.0
+rect_scale = Vector2( 1.05128, 1.73489 )
+custom_colors/font_color = Color( 0.94902, 0.305882, 0.447059, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "DASHEA PRESIONANDO RAPIDAMENTE 
+qEL MISMO BOTON DE DIRECCION  /"
+
+[node name="Sprite" type="Sprite" parent="Destructibles/fondos/Label3"]
+modulate = Color( 0.94902, 0.305882, 0.447059, 1 )
+position = Vector2( 4103.57, 369.476 )
+scale = Vector2( 1.33964, 0.512385 )
+texture = ExtResource( 22 )
+
+[node name="Label4" type="Label" parent="Destructibles/fondos"]
+margin_left = 9276.0
+margin_top = -351.0
+margin_right = 15753.0
+margin_bottom = 224.0
+rect_scale = Vector2( 1.05128, 1.73489 )
+custom_colors/font_color = Color( 0.94902, 0.54902, 0.305882, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "MANTEN PRESIONADO
+PARA CARGAR TU DOBLE SALTO  "
+
+[node name="Label5" type="Label" parent="Destructibles/fondos"]
+margin_left = -3644.0
+margin_top = -490.0
+margin_right = -1056.0
+margin_bottom = 166.0
+rect_scale = Vector2( 1.05128, 1.73489 )
+custom_colors/font_color = Color( 0.94902, 0.909804, 0.305882, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 91 )
+text = "CLASHING"
+
+[node name="Label6" type="Label" parent="Destructibles/fondos"]
+margin_left = -923.0
+margin_top = -490.0
+margin_right = 1665.0
+margin_bottom = 166.0
+rect_scale = Vector2( 1.05128, 1.73489 )
+custom_colors/font_color = Color( 0.94902, 0.909804, 0.305882, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 92 )
+text = "LEGENDS"
+
+[node name="Label7" type="Label" parent="Destructibles/fondos"]
+margin_left = 2128.0
+margin_top = -351.0
+margin_right = 4716.0
+margin_bottom = 305.0
+rect_scale = Vector2( 1.05128, 1.73489 )
+custom_colors/font_color = Color( 0.854902, 0.2, 0.2, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 93 )
+text = "(>OWO)>"
+
+[node name="Edificio" type="Node2D" parent="Destructibles"]
+rotation = -0.002364
+
+[node name="Destructible7" parent="Destructibles/Edificio" instance=ExtResource( 12 )]
+position = Vector2( 174, -1158 )
+texture = SubResource( 72 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 120, 0 ), Vector2( 120, 150 ), Vector2( 0, 150 ) ]
+
+[node name="Destructible8" parent="Destructibles/Edificio" instance=ExtResource( 12 )]
+position = Vector2( 98, -1008 )
+texture = SubResource( 72 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 280, 0 ), Vector2( 280, 200 ), Vector2( 0, 200 ) ]
+
+[node name="Destructible9" parent="Destructibles/Edificio" instance=ExtResource( 12 )]
+position = Vector2( -9, -811 )
+texture = SubResource( 72 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 500, 0 ), Vector2( 500, 200 ), Vector2( 0, 200 ) ]
+
+[node name="Destructible11" parent="Destructibles/Edificio" instance=ExtResource( 12 )]
+position = Vector2( -700, 220 )
+texture = SubResource( 73 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 1850, 0 ), Vector2( 1850, 220 ), Vector2( 0, 220 ) ]
+
+[node name="Destructible12" parent="Destructibles/Edificio" instance=ExtResource( 12 )]
+position = Vector2( -874, 384 )
+texture = SubResource( 70 )
+starting_polygon = [ Vector2( 0, 50 ), Vector2( 2250, 50 ), Vector2( 2250, 220 ), Vector2( 0, 220 ) ]
+
+[node name="Destructible10" parent="Destructibles/Edificio" instance=ExtResource( 12 )]
+position = Vector2( -195.543, -616.464 )
+rotation = 0.002364
+texture = SubResource( 74 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 922, 0 ), Vector2( 922, 837 ), Vector2( 0, 837 ) ]
+
+[node name="Destructible" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( -12906, -1392 )
+texture = SubResource( 31 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 650, 2 ), Vector2( 650, 2000 ), Vector2( 0, 2000 ) ]
+
+[node name="Destructible2" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( -13629, -2396 )
+texture = SubResource( 31 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 650, 0 ), Vector2( 650, 3000 ), Vector2( 0, 3000 ) ]
+
+[node name="Destructible3" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( -14628, -5692 )
+texture = SubResource( 44 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 975, 0 ), Vector2( 975, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible4" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( 16036, -5692 )
+texture = SubResource( 44 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 975, 0 ), Vector2( 975, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible5" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( 14632, -1392 )
+texture = SubResource( 47 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 650, 2 ), Vector2( 650, 2000 ), Vector2( 0, 2000 ) ]
+
+[node name="Destructible6" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( 15281, -1995 )
+texture = SubResource( 31 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 750, 0 ), Vector2( 750, 2600 ), Vector2( 0, 2600 ) ]
+
+[node name="Destructible11" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( -5817, -5394 )
+texture = SubResource( 31 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2000, 0 ), Vector2( 2000, 6000 ), Vector2( 0, 6000 ) ]
+
+[node name="Destructible13" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( 4356, -5394 )
+texture = SubResource( 18 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2000, 0 ), Vector2( 2000, 6000 ), Vector2( 0, 6000 ) ]
+
+[node name="Destructible77" parent="Destructibles" instance=ExtResource( 12 )]
+visible = false
+position = Vector2( -3818, -3507 )
+texture = SubResource( 53 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 979, 0 ), Vector2( 979, 952 ), Vector2( 0, 952 ) ]
+
+[node name="Destructible10" parent="Destructibles" instance=ExtResource( 12 )]
+visible = false
+position = Vector2( -3815, -3447 )
+texture = SubResource( 43 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 922, 0 ), Vector2( 922, 837 ), Vector2( 0, 837 ) ]
+
+[node name="Destructible12" parent="Destructibles" instance=ExtResource( 12 )]
+visible = false
+position = Vector2( -2888, -3485 )
+texture = SubResource( 57 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 50, 0 ), Vector2( 50, 953 ), Vector2( 0, 953 ) ]
+
+[node name="Destructible14" parent="Destructibles" instance=ExtResource( 12 )]
+visible = false
+position = Vector2( -3815, -2605 )
+texture = SubResource( 58 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 979, 0 ), Vector2( 979, 60 ), Vector2( 0, 60 ) ]
+
+[node name="Destructible76" parent="Destructibles" instance=ExtResource( 12 )]
+visible = false
+position = Vector2( -3815, -3507 )
+texture = SubResource( 59 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 979, 0 ), Vector2( 979, 60 ), Vector2( 0, 60 ) ]
+
+[node name="Destructible78" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( 8665, -2116 )
+texture = SubResource( 60 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 470, 0 ), Vector2( 470, 2763 ), Vector2( 0, 2763 ) ]
+
+[node name="Destructible80" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( 6928, -4337 )
+texture = SubResource( 56 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 3760, 0 ), Vector2( 3760, 2213 ), Vector2( 0, 2213 ) ]
+texture_frames = [ ExtResource( 56 ), ExtResource( 159 ), ExtResource( 288 ), ExtResource( 281 ), ExtResource( 161 ), ExtResource( 188 ), ExtResource( 186 ), ExtResource( 168 ), ExtResource( 294 ), ExtResource( 49 ), ExtResource( 64 ), ExtResource( 158 ), ExtResource( 132 ), ExtResource( 147 ), ExtResource( 87 ), ExtResource( 88 ), ExtResource( 86 ), ExtResource( 115 ), ExtResource( 122 ), ExtResource( 118 ), ExtResource( 268 ), ExtResource( 228 ), ExtResource( 224 ), ExtResource( 261 ), ExtResource( 242 ), ExtResource( 246 ), ExtResource( 247 ), ExtResource( 251 ), ExtResource( 253 ), ExtResource( 284 ), ExtResource( 289 ), ExtResource( 290 ), ExtResource( 278 ), ExtResource( 285 ), ExtResource( 279 ), ExtResource( 286 ), ExtResource( 280 ), ExtResource( 282 ), ExtResource( 287 ), ExtResource( 283 ), ExtResource( 176 ), ExtResource( 203 ), ExtResource( 204 ), ExtResource( 187 ), ExtResource( 196 ), ExtResource( 174 ), ExtResource( 183 ), ExtResource( 211 ), ExtResource( 197 ), ExtResource( 184 ), ExtResource( 191 ), ExtResource( 195 ), ExtResource( 185 ), ExtResource( 212 ), ExtResource( 180 ), ExtResource( 177 ), ExtResource( 182 ), ExtResource( 198 ), ExtResource( 164 ), ExtResource( 213 ), ExtResource( 209 ), ExtResource( 178 ), ExtResource( 175 ), ExtResource( 202 ), ExtResource( 163 ), ExtResource( 173 ), ExtResource( 165 ), ExtResource( 181 ), ExtResource( 199 ), ExtResource( 162 ), ExtResource( 205 ), ExtResource( 194 ), ExtResource( 189 ), ExtResource( 166 ), ExtResource( 201 ), ExtResource( 167 ), ExtResource( 179 ), ExtResource( 200 ), ExtResource( 190 ), ExtResource( 206 ), ExtResource( 210 ), ExtResource( 207 ), ExtResource( 208 ), ExtResource( 169 ), ExtResource( 192 ), ExtResource( 170 ), ExtResource( 193 ), ExtResource( 171 ), ExtResource( 172 ), ExtResource( 295 ), ExtResource( 291 ), ExtResource( 296 ), ExtResource( 292 ), ExtResource( 298 ), ExtResource( 297 ), ExtResource( 299 ), ExtResource( 301 ), ExtResource( 300 ), ExtResource( 293 ), ExtResource( 53 ), ExtResource( 50 ), ExtResource( 51 ), ExtResource( 52 ), ExtResource( 58 ), ExtResource( 54 ), ExtResource( 55 ), ExtResource( 57 ), ExtResource( 59 ), ExtResource( 63 ), ExtResource( 60 ), ExtResource( 61 ), ExtResource( 62 ), ExtResource( 65 ), ExtResource( 66 ), ExtResource( 31 ), ExtResource( 156 ), ExtResource( 124 ), ExtResource( 129 ), ExtResource( 153 ), ExtResource( 131 ), ExtResource( 157 ), ExtResource( 154 ), ExtResource( 126 ), ExtResource( 127 ), ExtResource( 125 ), ExtResource( 155 ), ExtResource( 128 ), ExtResource( 139 ), ExtResource( 130 ), ExtResource( 133 ), ExtResource( 134 ), ExtResource( 148 ), ExtResource( 136 ), ExtResource( 135 ), ExtResource( 144 ), ExtResource( 151 ), ExtResource( 137 ), ExtResource( 152 ), ExtResource( 138 ), ExtResource( 149 ), ExtResource( 140 ), ExtResource( 141 ), ExtResource( 142 ), ExtResource( 150 ), ExtResource( 143 ), ExtResource( 145 ), ExtResource( 146 ), ExtResource( 101 ), ExtResource( 92 ), ExtResource( 89 ), ExtResource( 95 ), ExtResource( 98 ), ExtResource( 83 ), ExtResource( 99 ), ExtResource( 96 ), ExtResource( 90 ), ExtResource( 100 ), ExtResource( 91 ), ExtResource( 97 ), ExtResource( 93 ), ExtResource( 85 ), ExtResource( 102 ), ExtResource( 103 ), ExtResource( 104 ), ExtResource( 82 ), ExtResource( 105 ), ExtResource( 106 ), ExtResource( 94 ), ExtResource( 84 ), ExtResource( 74 ), ExtResource( 73 ), ExtResource( 70 ), ExtResource( 71 ), ExtResource( 72 ), ExtResource( 75 ), ExtResource( 76 ), ExtResource( 67 ), ExtResource( 68 ), ExtResource( 69 ), ExtResource( 111 ), ExtResource( 112 ), ExtResource( 116 ), ExtResource( 113 ), ExtResource( 117 ), ExtResource( 114 ), ExtResource( 119 ), ExtResource( 120 ), ExtResource( 121 ), ExtResource( 123 ), ExtResource( 77 ), ExtResource( 78 ), ExtResource( 80 ), ExtResource( 79 ), ExtResource( 81 ), ExtResource( 109 ), ExtResource( 110 ), ExtResource( 107 ), ExtResource( 108 ), ExtResource( 160 ), ExtResource( 273 ), ExtResource( 275 ), ExtResource( 277 ), ExtResource( 258 ), ExtResource( 250 ), ExtResource( 270 ), ExtResource( 218 ), ExtResource( 239 ), ExtResource( 259 ), ExtResource( 214 ), ExtResource( 231 ), ExtResource( 248 ), ExtResource( 255 ), ExtResource( 260 ), ExtResource( 276 ), ExtResource( 271 ), ExtResource( 222 ), ExtResource( 215 ), ExtResource( 263 ), ExtResource( 256 ), ExtResource( 269 ), ExtResource( 264 ), ExtResource( 223 ), ExtResource( 216 ), ExtResource( 272 ), ExtResource( 274 ), ExtResource( 217 ), ExtResource( 219 ), ExtResource( 227 ), ExtResource( 234 ), ExtResource( 232 ), ExtResource( 225 ), ExtResource( 266 ), ExtResource( 265 ), ExtResource( 235 ), ExtResource( 249 ), ExtResource( 220 ), ExtResource( 254 ), ExtResource( 240 ), ExtResource( 236 ), ExtResource( 221 ), ExtResource( 226 ), ExtResource( 257 ), ExtResource( 229 ), ExtResource( 230 ), ExtResource( 252 ), ExtResource( 233 ), ExtResource( 237 ), ExtResource( 238 ), ExtResource( 241 ), ExtResource( 262 ), ExtResource( 243 ), ExtResource( 267 ), ExtResource( 244 ), ExtResource( 245 ) ]
+fps = 60.0
+
+[node name="Destructible81" parent="Destructibles" instance=ExtResource( 12 )]
+visible = false
+material = SubResource( 63 )
+position = Vector2( 6928, -4337 )
+texture = SubResource( 64 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 3760, 0 ), Vector2( 3760, 2220 ), Vector2( 0, 2220 ) ]
+
+[node name="CollisionPolygon2D" parent="Destructibles/Destructible81" index="0"]
+use_parent_material = true
+polygon = PoolVector2Array( 0, 0, 3760, 0, 3760, 2220, 0, 2220 )
+
+[node name="Polygonete" parent="Destructibles/Destructible81/CollisionPolygon2D" index="0"]
+use_parent_material = true
+texture = SubResource( 96 )
+polygon = PoolVector2Array( 0, 0, 3760, 0, 3760, 2220, 0, 2220 )
+
+[node name="Destructible79" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( 6928, -2116 )
+texture = SubResource( 61 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 3760, 0 ), Vector2( 3760, 369 ), Vector2( 0, 369 ) ]
+
+[node name="Destructible83" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( 3756, -4499 )
+texture = SubResource( 77 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 566, 0 ), Vector2( 566, 3717 ), Vector2( 0, 3717 ) ]
+texture_frames = [ ExtResource( 46 ), ExtResource( 45 ), ExtResource( 43 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ) ]
+
+[node name="Destructible84" parent="Destructibles" instance=ExtResource( 12 )]
+position = Vector2( -6417, -4499 )
+texture = SubResource( 79 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 566, 0 ), Vector2( 566, 3717 ), Vector2( 0, 3717 ) ]
+texture_frames = [ ExtResource( 47 ), ExtResource( 48 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 44 ) ]
+
+[node name="vereda" type="Node2D" parent="Destructibles"]
+
+[node name="Destructible85" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( -19109, 609 )
+texture = SubResource( 82 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 869 ), Vector2( 0, 869 ) ]
+
+[node name="Destructible86" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( -14659, 609 )
+texture = SubResource( 82 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 869 ), Vector2( 0, 869 ) ]
+
+[node name="Destructible87" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( -10216, 609 )
+texture = SubResource( 82 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 869 ), Vector2( 0, 869 ) ]
+
+[node name="Destructible88" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( -5768, 609 )
+texture = SubResource( 82 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 869 ), Vector2( 0, 869 ) ]
+
+[node name="Destructible89" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( -1318, 609 )
+texture = SubResource( 82 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 869 ), Vector2( 0, 869 ) ]
+
+[node name="Destructible90" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( 3128, 609 )
+texture = SubResource( 82 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 869 ), Vector2( 0, 869 ) ]
+
+[node name="Destructible91" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( 7578, 609 )
+texture = SubResource( 82 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 869 ), Vector2( 0, 869 ) ]
+
+[node name="Destructible92" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( 12024, 609 )
+texture = SubResource( 82 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 869 ), Vector2( 0, 869 ) ]
+
+[node name="Destructible93" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( 16472, 609 )
+texture = SubResource( 82 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 869 ), Vector2( 0, 869 ) ]
+
+[node name="Destructible94" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( 20920, 608 )
+texture = SubResource( 82 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 869 ), Vector2( 0, 869 ) ]
+
+[node name="Destructible28" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( -19105, 1478 )
+texture = SubResource( 83 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 848 ), Vector2( 0, 848 ) ]
+
+[node name="Destructible29" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( -14655, 1478 )
+texture = SubResource( 83 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 848 ), Vector2( 0, 848 ) ]
+
+[node name="Destructible30" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( -10205, 1478 )
+texture = SubResource( 83 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 848 ), Vector2( 0, 848 ) ]
+
+[node name="Destructible31" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( -5755, 1478 )
+texture = SubResource( 83 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 848 ), Vector2( 0, 848 ) ]
+
+[node name="Destructible32" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( -1305, 1478 )
+texture = SubResource( 83 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 848 ), Vector2( 0, 848 ) ]
+
+[node name="Destructible33" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( 3145, 1478 )
+texture = SubResource( 83 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 848 ), Vector2( 0, 848 ) ]
+
+[node name="Destructible34" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( 7595, 1478 )
+texture = SubResource( 83 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 848 ), Vector2( 0, 848 ) ]
+
+[node name="Destructible35" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( 12045, 1478 )
+texture = SubResource( 83 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 848 ), Vector2( 0, 848 ) ]
+
+[node name="Destructible36" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( 16495, 1478 )
+texture = SubResource( 83 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 848 ), Vector2( 0, 848 ) ]
+
+[node name="Destructible37" parent="Destructibles/vereda" instance=ExtResource( 12 )]
+position = Vector2( 20945, 1478 )
+texture = SubResource( 83 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 4450, 0 ), Vector2( 4450, 848 ), Vector2( 0, 848 ) ]
+
+[node name="tierra" type="Node2D" parent="Destructibles"]
+
+[node name="Destructible7" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -19135, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible8" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -16835, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible9" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -14535, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible15" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -12235, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible16" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -9935, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible17" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -7635, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible18" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -5335, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible19" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -3035, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible20" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -735, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible21" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 1565, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible22" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 3865, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible23" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 6165, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible24" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 8465, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible25" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 10765, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible26" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 13065, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible27" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 15365, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible28" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 17665, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible29" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 19965, 2326 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible30" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 19965, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible31" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 17665, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible32" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 15365, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible33" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 13065, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible34" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 10765, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible35" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 8465, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible36" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 6165, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible37" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 3865, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible38" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 1565, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible39" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -735, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible40" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -3035, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible41" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -5335, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible42" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -7635, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible43" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -9935, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible44" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -12235, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible45" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -14535, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible46" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -16835, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible47" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -19135, 4726 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible48" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -19135, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible49" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -16835, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible74" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -14535, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible75" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -12235, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible85" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -9935, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible86" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -7635, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible87" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -5335, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible88" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -3035, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible89" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -735, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible90" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 1565, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible91" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 3865, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible92" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 6165, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible93" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 8465, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible94" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 10765, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible95" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 13065, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible96" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 15365, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible97" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 17665, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible98" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 19965, 7126 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible99" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 19965, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible100" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 17665, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible101" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 15365, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible102" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 13065, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible103" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 10765, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible104" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 8465, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible105" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 6165, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible106" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 3865, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible107" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( 1565, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible108" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -735, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible109" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -3035, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible110" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -5335, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible111" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -7635, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible112" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -9935, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible113" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -12235, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible115" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -14535, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible116" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -16835, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="Destructible117" parent="Destructibles/tierra" instance=ExtResource( 12 )]
+position = Vector2( -19135, 9526 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2300, 0 ), Vector2( 2300, 2400 ), Vector2( 0, 2400 ) ]
+
+[node name="limites" type="Node2D" parent="Destructibles"]
+
+[node name="Destructible7" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( -16896, -5696 )
+texture = SubResource( 85 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible8" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( -16896, -11996 )
+texture = SubResource( 85 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible9" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( -16896, -18296 )
+texture = SubResource( 85 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible15" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( -16896, -24596 )
+texture = SubResource( 85 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible16" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( -19164, -24596 )
+texture = SubResource( 86 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible17" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( -19164, -18296 )
+texture = SubResource( 86 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible18" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( -19164, -11996 )
+texture = SubResource( 86 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible19" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( -19164, -5696 )
+texture = SubResource( 86 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible10" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( 17011, -5692 )
+texture = SubResource( 88 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible11" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( 17011, -11992 )
+texture = SubResource( 88 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible12" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( 17011, -18292 )
+texture = SubResource( 88 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible20" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( 17011, -24592 )
+texture = SubResource( 88 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible13" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( 19279, -24592 )
+texture = SubResource( 89 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible14" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( 19279, -18292 )
+texture = SubResource( 89 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible21" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( 19279, -11992 )
+texture = SubResource( 89 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Destructible22" parent="Destructibles/limites" instance=ExtResource( 12 )]
+position = Vector2( 19279, -5692 )
+texture = SubResource( 89 )
+starting_polygon = [ Vector2( 0, 0 ), Vector2( 2268, 0 ), Vector2( 2268, 6300 ), Vector2( 0, 6300 ) ]
+
+[node name="Background" type="AudioStreamPlayer" parent="."]
+autoplay = true
+
+[node name="Explosion" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -5.0
+
+[node name="Player1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 16545, -7500 )
+collision_layer = 4
+ACCELERATION = 100.0
+
+[node name="Player2" parent="." instance=ExtResource( 2 )]
+position = Vector2( -14212, -7500 )
+collision_layer = 2
+collision_mask = 1
+ACCELERATION = 100.0
+
+[node name="Borders" type="Node2D" parent="."]
+
+[node name="ws5" type="StaticBody2D" parent="Borders"]
+position = Vector2( -23642, -1891 )
+rotation = -1.57079
+scale = Vector2( 12.717, -137.443 )
+collision_layer = 9
+collision_mask = 0
+
+[node name="Sprite" type="Sprite" parent="Borders/ws5"]
+position = Vector2( -1.40255, -0.0533476 )
+scale = Vector2( 30.7374, 1.02917 )
+texture = ExtResource( 30 )
+
+[node name="ws6" type="StaticBody2D" parent="Borders"]
+position = Vector2( -23642, -26907 )
+rotation = -1.57079
+scale = Vector2( 12.717, -137.443 )
+collision_layer = 9
+collision_mask = 0
+
+[node name="Sprite" type="Sprite" parent="Borders/ws6"]
+position = Vector2( -1.40255, -0.0533476 )
+scale = Vector2( 30.7374, 1.02917 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/ws6"]
+position = Vector2( -897.615, -29.6128 )
+rotation = -1.57073
+scale = Vector2( 0.00727574, -0.0786349 )
+shape = SubResource( 50 )
+
+[node name="ws7" type="StaticBody2D" parent="Borders"]
+position = Vector2( 25901, -1939 )
+rotation = -1.57079
+scale = Vector2( 12.717, -137.443 )
+collision_layer = 9
+collision_mask = 0
+
+[node name="Sprite" type="Sprite" parent="Borders/ws7"]
+position = Vector2( -4.2291, 1.50204e-05 )
+scale = Vector2( 30.954, 1.03267 )
+texture = ExtResource( 30 )
+
+[node name="ws8" type="StaticBody2D" parent="Borders"]
+position = Vector2( 25901, -27033 )
+rotation = -1.57079
+scale = Vector2( 12.717, -137.443 )
+collision_layer = 9
+collision_mask = 0
+
+[node name="Sprite" type="Sprite" parent="Borders/ws8"]
+position = Vector2( -4.2291, 1.50204e-05 )
+scale = Vector2( 30.954, 1.03267 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Borders/ws8"]
+position = Vector2( -967.132, 29.4189 )
+rotation = -1.57073
+scale = Vector2( 0.00727574, -0.0786349 )
+shape = SubResource( 52 )
+
+[node name="ws9" type="StaticBody2D" parent="Borders"]
+position = Vector2( 1328, 23920 )
+scale = Vector2( 29.717, -137.443 )
+collision_layer = 9
+collision_mask = 0
+
+[node name="Sprite" type="Sprite" parent="Borders/ws9"]
+position = Vector2( -5.78804, -0.657822 )
+scale = Vector2( 30.8031, 1.02056 )
+texture = ExtResource( 30 )
+
+[node name="ws10" type="StaticBody2D" parent="Borders"]
+position = Vector2( 1169, 15116 )
+scale = Vector2( 29.717, -137.443 )
+collision_layer = 9
+collision_mask = 0
+
+[node name="Sprite" type="Sprite" parent="Borders/ws10"]
+position = Vector2( -0.269269, 0.461346 )
+scale = Vector2( 30.8199, 1.01442 )
+texture = ExtResource( 30 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Borders/ws10"]
+position = Vector2( -1.14441e-05, 31.1038 )
+scale = Vector2( 0.0336508, -0.00727574 )
+shape = SubResource( 51 )
+
+[editable path="Destructibles/Destructible81"]
